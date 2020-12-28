@@ -9,6 +9,10 @@ import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
 import {APP_BASE_HREF} from '@angular/common';
 import { CoursesCenterComponent } from './courses-center/courses-center.component';
+import { AdminCenterComponent } from './admin-center/admin-center.component';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { EditCourseComponent } from './edit-course/edit-course.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -22,8 +26,16 @@ const routes: Routes = [
       ]
   },
 
+  { path: 'home/admin', component: AdminCenterComponent,
+      children: [
+        { path: 'addcourse', component: AddCourseComponent },
+        { path: 'editcourse', component: EditCourseComponent },
+        { path: 'settings', component: SettingsComponent }, 
+      ]
+  },
 
-  { path: '', redirectTo: '/home/mycourses', pathMatch: 'full' },
+ // { path: '', redirectTo: '/home/mycourses', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: ErrorComponent }
 ];
 

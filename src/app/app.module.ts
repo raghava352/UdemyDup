@@ -11,6 +11,11 @@ import { ArchivedComponent } from './archived/archived.component';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
 import { CoursesCenterComponent } from './courses-center/courses-center.component';
+import { AdminCenterComponent } from './admin-center/admin-center.component';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { EditCourseComponent } from './edit-course/edit-course.component';
+import { SettingsComponent } from './settings/settings.component';
+import { AdminheaderComponent } from './adminheader/adminheader.component';
 //import {APP_BASE_HREF} from '@angular/common';
 
 @NgModule({
@@ -23,7 +28,12 @@ import { CoursesCenterComponent } from './courses-center/courses-center.componen
     ArchivedComponent,
     HomeComponent,
     ErrorComponent,
-    CoursesCenterComponent
+    CoursesCenterComponent,
+    AdminCenterComponent,
+    AddCourseComponent,
+    EditCourseComponent,
+    SettingsComponent,
+    AdminheaderComponent
   ],
   imports: [
     BrowserModule,
